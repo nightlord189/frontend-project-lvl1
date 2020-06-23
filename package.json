@@ -1,6 +1,6 @@
 {
   "name": "frontend-project-lvl1",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "",
   "type": "module",
   "main": "index.js",
@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/nightlord189/frontend-project-lvl1/issues"
   },
-  "homepage": "https://github.com/nightlord189/frontend-project-lvl1#readme"
+  "homepage": "https://github.com/nightlord189/frontend-project-lvl1#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
 }
