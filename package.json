@@ -2,6 +2,7 @@
   "name": "frontend-project-lvl1",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,6 +10,9 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nightlord189/frontend-project-lvl1.git"
+  },
+  "bin": {
+    "brain-games": "bin/brain-games.js"
   },
   "author": "night.lord@nlgmail.com",
   "license": "ISC",
