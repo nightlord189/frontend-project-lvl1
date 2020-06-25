@@ -21,6 +21,9 @@
   },
   "homepage": "https://github.com/nightlord189/frontend-project-lvl1#readme",
   "dependencies": {
+    "eslint": "^7.3.1",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.21.2",
     "readline-sync": "^1.4.10"
   }
 }
