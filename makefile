@@ -12,3 +12,6 @@ publish:
 
 lint:
 	npx eslint . --fix
+
+link:
+	npm link --force

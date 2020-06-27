@@ -1,8 +1,9 @@
 import readlineSync from 'readline-sync';
 import askName from '../cli.js';
+import getRandomInt from '../index.js';
 
 const askQuestion = (name) => {
-  const number = Math.floor(Math.random() * 100) + 1; // from 1 to 100
+  const number = getRandomInt(1, 100);
   const correctAnswer = number % 2 === 0 ? 'yes' : 'no';
   console.log(`Question: ${number}`);
   const answer = readlineSync.question('Your answer: ');
