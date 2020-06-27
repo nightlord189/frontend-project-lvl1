@@ -1,6 +1,5 @@
 import readlineSync from 'readline-sync';
-import askName from '../cli.js';
-import getRandomInt from '../index.js';
+import { gameLoop, getRandomInt } from '../index.js';
 
 const progressionLength = 10;
 
