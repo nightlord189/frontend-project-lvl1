@@ -24,14 +24,9 @@ const askQuestion = (name) => {
   return false;
 };
 
-const game = () => {
-  const name = askName();
-  console.log('What number is missing in the progression?');
-  let successCount = 0;
-  while (successCount < 3) {
-    successCount = askQuestion(name) ? successCount + 1 : 0;
-  }
-  console.log(`Congratulations, ${name}!`);
-};
+const game = () => gameLoop(
+  'What number is missing in the progression?',
+  askQuestion,
+);
 
 export default game;
