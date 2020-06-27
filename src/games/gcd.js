@@ -2,27 +2,35 @@ import readlineSync from 'readline-sync';
 import askName from '../cli.js';
 import getRandomInt from '../index.js';
 
-const operations = ['+', '-', '*'];
-
-const calcResult = (n1, n2, oper) => {
-  switch (oper) {
-    case '+':
-      return n1 + n2;
-    case '-':
-      return n1 - n2;
-    case '*':
-      return n1 * n2;
-    default:
-      return NaN;
+const getGCD = (n1, n2) => {
+  let var1 = n1;
+  let var2 = n2;
+  let result = 0;
+  while (result === 0) {
+    if (var1 > var2) {
+      const remainder = var1 % var2;
+      if (remainder === 0) {
+        result = var2;
+        break;
+      }
+      var1 = remainder;
+    } else {
+      const remainder = var2 % var1;
+      if (remainder === 0) {
+        result = var1;
+        break;
+      }
+      var2 = remainder;
+    }
   }
+  return result;
 };
 
 const askQuestion = (name) => {
   const n1 = getRandomInt(1, 100); // from 1 to 100
   const n2 = getRandomInt(1, 100);
-  const oper = operations[getRandomInt(0, 2)];
-  const correctAnswer = calcResult(n1, n2, oper);
-  console.log(`Question: ${n1} ${oper} ${n2}`);
+  const correctAnswer = getGCD(n1, n2);
+  console.log(`Question: ${n1} ${n2}`);
   const answer = readlineSync.question('Your answer: ');
   if (parseInt(answer, 10) === correctAnswer) {
     console.log('Correct!');
@@ -35,7 +43,7 @@ const askQuestion = (name) => {
 
 const game = () => {
   const name = askName();
-  console.log('What is the result of the expression?');
+  console.log('Find the greatest common divisor of given numbers.');
   let successCount = 0;
   while (successCount < 3) {
     successCount = askQuestion(name) ? successCount + 1 : 0;
