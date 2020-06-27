@@ -1,6 +1,5 @@
 import readlineSync from 'readline-sync';
-import askName from '../cli.js';
-import getRandomInt from '../index.js';
+import { gameLoop, getRandomInt } from '../index.js';
 
 const getGCD = (n1, n2) => {
   let var1 = n1;
@@ -41,14 +40,9 @@ const askQuestion = (name) => {
   return false;
 };
 
-const game = () => {
-  const name = askName();
-  console.log('Find the greatest common divisor of given numbers.');
-  let successCount = 0;
-  while (successCount < 3) {
-    successCount = askQuestion(name) ? successCount + 1 : 0;
-  }
-  console.log(`Congratulations, ${name}!`);
-};
+const game = () => gameLoop(
+  'Find the greatest common divisor of given numbers.',
+  askQuestion,
+);
 
 export default game;

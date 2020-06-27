@@ -1,6 +1,5 @@
 import readlineSync from 'readline-sync';
-import askName from '../cli.js';
-import getRandomInt from '../index.js';
+import { gameLoop, getRandomInt } from '../index.js';
 
 const operations = ['+', '-', '*'];
 
@@ -33,14 +32,9 @@ const askQuestion = (name) => {
   return false;
 };
 
-const game = () => {
-  const name = askName();
-  console.log('What is the result of the expression?');
-  let successCount = 0;
-  while (successCount < 3) {
-    successCount = askQuestion(name) ? successCount + 1 : 0;
-  }
-  console.log(`Congratulations, ${name}!`);
-};
+const game = () => gameLoop(
+  'What is the result of the expression?',
+  askQuestion,
+);
 
 export default game;
