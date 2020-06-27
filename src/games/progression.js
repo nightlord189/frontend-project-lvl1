@@ -1,9 +1,8 @@
-import readlineSync from 'readline-sync';
 import { gameLoop, getRandomInt } from '../index.js';
 
 const progressionLength = 10;
 
-const askQuestion = (name) => {
+const getQuestion = () => {
   const start = getRandomInt(1, 10);
   const change = getRandomInt(1, 10);
   const arr = [start];
@@ -12,20 +11,12 @@ const askQuestion = (name) => {
   }
   const missingIndex = getRandomInt(0, progressionLength - 1);
   const arrStr = arr.join(' ').replace(arr[missingIndex], '..');
-  console.log(`Question: ${arrStr}`);
-  const answer = readlineSync.question('Your answer: ');
-  if (parseInt(answer, 10) === arr[missingIndex]) {
-    console.log('Correct!');
-    return true;
-  }
-  console.log(`"${answer}" is wrong answer ;(. Correct answer was "${arr[missingIndex]}".`);
-  console.log(`Let's try again, ${name}!`);
-  return false;
+  return [arrStr, arr[missingIndex].toString()];
 };
 
 const game = () => gameLoop(
   'What number is missing in the progression?',
-  askQuestion,
+  getQuestion,
 );
 
 export default game;

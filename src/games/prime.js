@@ -1,4 +1,3 @@
-import readlineSync from 'readline-sync';
 import { gameLoop, getRandomInt } from '../index.js';
 
 const isPrime = (n) => {
@@ -16,23 +15,15 @@ const isPrime = (n) => {
   return true;
 };
 
-const askQuestion = (name) => {
+const getQuestion = () => {
   const number = getRandomInt(1, 31);
   const correctAnswer = isPrime(number) ? 'yes' : 'no';
-  console.log(`Question: ${number}`);
-  const answer = readlineSync.question('Your answer: ');
-  if (answer === correctAnswer) {
-    console.log('Correct!');
-    return true;
-  }
-  console.log(`"${answer}" is wrong answer ;(. Correct answer was "${correctAnswer}".`);
-  console.log(`Let's try again, ${name}!`);
-  return false;
+  return [number, correctAnswer];
 };
 
 const game = () => gameLoop(
   'Answer "yes" if given number is prime. Otherwise answer "no".',
-  askQuestion,
+  getQuestion,
 );
 
 export default game;

@@ -1,4 +1,3 @@
-import readlineSync from 'readline-sync';
 import { gameLoop, getRandomInt } from '../index.js';
 
 const getGCD = (n1, n2) => {
@@ -25,24 +24,17 @@ const getGCD = (n1, n2) => {
   return result;
 };
 
-const askQuestion = (name) => {
-  const n1 = getRandomInt(1, 100); // from 1 to 100
+const getQuestion = () => {
+  const n1 = getRandomInt(1, 100);
   const n2 = getRandomInt(1, 100);
   const correctAnswer = getGCD(n1, n2);
-  console.log(`Question: ${n1} ${n2}`);
-  const answer = readlineSync.question('Your answer: ');
-  if (parseInt(answer, 10) === correctAnswer) {
-    console.log('Correct!');
-    return true;
-  }
-  console.log(`"${answer}" is wrong answer ;(. Correct answer was "${correctAnswer}".`);
-  console.log(`Let's try again, ${name}!`);
-  return false;
+  const question = `${n1} ${n2}`;
+  return [question, correctAnswer.toString()];
 };
 
 const game = () => gameLoop(
   'Find the greatest common divisor of given numbers.',
-  askQuestion,
+  getQuestion,
 );
 
 export default game;
