@@ -5,3 +5,15 @@
 ## Games
 1. brain-even
 [![asciicast](https://asciinema.org/a/ft4KDldsCUKFTHo0PJxKcsY2m.svg)](https://asciinema.org/a/ft4KDldsCUKFTHo0PJxKcsY2m)
+
+2. brain-calc
+[![asciicast](https://asciinema.org/a/c4ZPLRcEynGlRpJTjcFgbp0bf.svg)](https://asciinema.org/a/c4ZPLRcEynGlRpJTjcFgbp0bf)
+
+3. brain-gcd
+[![asciicast](https://asciinema.org/a/Y07tth2d08HvtDl79KPzXM4FC.svg)](https://asciinema.org/a/Y07tth2d08HvtDl79KPzXM4FC)
+
+4. brain-progression
+[![asciicast](https://asciinema.org/a/pXAaD9DhKtlrP1JG1kZJKadxw.svg)](https://asciinema.org/a/pXAaD9DhKtlrP1JG1kZJKadxw)
+
+5. brain-prime
+[![asciicast](https://asciinema.org/a/U8xlzrHHcQiI8GbXvEZUhXZ0P.svg)](https://asciinema.org/a/U8xlzrHHcQiI8GbXvEZUhXZ0P)
