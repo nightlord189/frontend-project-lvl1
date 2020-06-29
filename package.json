@@ -1,6 +1,6 @@
 {
   "name": "frontend-project-lvl1",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "",
   "type": "module",
   "main": "index.js",
@@ -26,9 +26,11 @@
   },
   "homepage": "https://github.com/nightlord189/frontend-project-lvl1#readme",
   "dependencies": {
+    "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
     "eslint": "^7.3.1",
     "eslint-config-airbnb-base": "^14.2.0",
-    "eslint-plugin-import": "^2.21.2",
-    "readline-sync": "^1.4.10"
+    "eslint-plugin-import": "^2.21.2"
   }
 }
