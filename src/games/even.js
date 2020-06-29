@@ -1,5 +1,5 @@
 import gameLoop from '../index.js';
-import getRandomInt from '../utils.js'
+import getRandomInt from '../utils.js';
 
 const getQuestion = () => {
   const number = getRandomInt(1, 100);

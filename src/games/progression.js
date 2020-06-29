@@ -1,5 +1,5 @@
 import gameLoop from '../index.js';
-import getRandomInt from '../utils.js'
+import getRandomInt from '../utils.js';
 
 const progressionLength = 10;
 
