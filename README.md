@@ -2,6 +2,23 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
 ![](https://github.com/nightlord189/frontend-project-lvl1/workflows/make%20lint/badge.svg)
 
+## Description
+Brain Games is training JS-projects, consists of five console brain games: even, calculator, gcd, progression, prime numbers
+
+
+## Getting Started
+### Setup:
+git clone https://github.com/nightlord189/frontend-project-lvl1
+npm install
+npm link
+
+### Launch:
+brain-even
+brain-calc
+brain-gcd
+brain-progression
+brain-prime
+
 ## Games
 1. brain-even
 [![asciicast](https://asciinema.org/a/ft4KDldsCUKFTHo0PJxKcsY2m.svg)](https://asciinema.org/a/ft4KDldsCUKFTHo0PJxKcsY2m)
