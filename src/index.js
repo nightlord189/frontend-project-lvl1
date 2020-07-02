@@ -1,6 +1,8 @@
 import readlineSync from 'readline-sync';
 import askName from './cli.js';
 
+const gamesCount = 3;
+
 const askQuestion = (name, question, correctAnswer) => {
   console.log(`Question: ${question}`);
   const answer = readlineSync.question('Your answer: ');
@@ -18,7 +20,7 @@ const gameLoop = (greeting, getQuestion) => {
   const name = askName();
   console.log(greeting);
   let successCount = 0;
-  while (successCount < 3) {
+  while (successCount < gamesCount) {
     const [question, answer] = getQuestion();
     if (askQuestion(name, question, answer)) {
       successCount += 1;

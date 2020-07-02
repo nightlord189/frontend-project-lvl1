@@ -25,7 +25,7 @@ const getGCD = (n1, n2) => {
   return result;
 };
 
-const getQuestion = () => {
+const getGameTask = () => {
   const n1 = getRandomInt(1, 100);
   const n2 = getRandomInt(1, 100);
   const correctAnswer = getGCD(n1, n2);
@@ -35,7 +35,7 @@ const getQuestion = () => {
 
 const game = () => gameLoop(
   'Find the greatest common divisor of given numbers.',
-  getQuestion,
+  getGameTask,
 );
 
 export default game;

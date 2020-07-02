@@ -16,7 +16,7 @@ const calcResult = (n1, n2, oper) => {
   }
 };
 
-const getQuestion = () => {
+const getGameTask = () => {
   const n1 = getRandomInt(1, 100);
   const n2 = getRandomInt(1, 100);
   const oper = operations[getRandomInt(0, 2)];
@@ -27,7 +27,7 @@ const getQuestion = () => {
 
 const game = () => gameLoop(
   'What is the result of the expression?',
-  getQuestion,
+  getGameTask,
 );
 
 export default game;

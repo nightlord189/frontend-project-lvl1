@@ -16,7 +16,7 @@ const isPrime = (n) => {
   return true;
 };
 
-const getQuestion = () => {
+const getGameTask = () => {
   const number = getRandomInt(1, 31);
   const correctAnswer = isPrime(number) ? 'yes' : 'no';
   return [number, correctAnswer];
@@ -24,7 +24,7 @@ const getQuestion = () => {
 
 const game = () => gameLoop(
   'Answer "yes" if given number is prime. Otherwise answer "no".',
-  getQuestion,
+  getGameTask,
 );
 
 export default game;
