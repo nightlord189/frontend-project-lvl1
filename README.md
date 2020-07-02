@@ -8,16 +8,20 @@ Brain Games is training JS-projects, consists of five console brain games: even,
 
 ## Getting Started
 ### Setup:
+```
 git clone https://github.com/nightlord189/frontend-project-lvl1
 npm install
 npm link
+```
 
 ### Launch:
+```
 brain-even
 brain-calc
 brain-gcd
 brain-progression
 brain-prime
+```
 
 ## Games
 1. brain-even
