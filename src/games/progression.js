@@ -11,7 +11,7 @@ const createProgression = () => {
     arr.push(arr[i - 1] + change);
   }
   return arr;
-}
+};
 
 const getGameTask = () => {
   const progression = createProgression();
