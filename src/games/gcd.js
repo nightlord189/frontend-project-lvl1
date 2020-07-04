@@ -3,19 +3,14 @@ import getRandomInt from '../utils.js';
 
 const getGCD = (n1, n2) => {
   while (true) {
-    if (n1 > n2) {
-      const remainder = n1 % n2;
-      if (remainder === 0) {
-        return n2
-      }
-      n1 = remainder;
-    } else {
-      const remainder = n2 % n1;
-      if (remainder === 0) {
-        return n1;
-      }
-      n2 = remainder;
+    if (n2>n1) {
+      [n1, n2] = [n2, n1]
     }
+    const remainder = n1 % n2;
+    if (remainder === 0) {
+      return n2
+    }
+    n1 = remainder;
   }
 };
 
@@ -31,5 +26,7 @@ const game = () => gameLoop(
   'Find the greatest common divisor of given numbers.',
   getGameTask,
 );
+
+
 
 export default game;
