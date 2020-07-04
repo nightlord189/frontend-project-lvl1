@@ -2,32 +2,26 @@ import gameLoop from '../index.js';
 import getRandomInt from '../utils.js';
 
 const getGCD = (n1, n2) => {
-  let var1 = n1;
-  let var2 = n2;
-  let result = 0;
-  while (result === 0) {
-    if (var1 > var2) {
-      const remainder = var1 % var2;
+  while (true) {
+    if (n1 > n2) {
+      const remainder = n1 % n2;
       if (remainder === 0) {
-        result = var2;
-        break;
+        return n2
       }
-      var1 = remainder;
+      n1 = remainder;
     } else {
-      const remainder = var2 % var1;
+      const remainder = n2 % n1;
       if (remainder === 0) {
-        result = var1;
-        break;
+        return n1;
       }
-      var2 = remainder;
+      n2 = remainder;
     }
   }
-  return result;
 };
 
 const getGameTask = () => {
-  const n1 = getRandomInt(1, 100);
-  const n2 = getRandomInt(1, 100);
+  const n1 = getRandomInt(1, 31);
+  const n2 = getRandomInt(1, 31);
   const correctAnswer = getGCD(n1, n2);
   const question = `${n1} ${n2}`;
   return [question, correctAnswer.toString()];
