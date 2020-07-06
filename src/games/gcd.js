@@ -3,18 +3,13 @@ import getRandomInt from '../utils.js';
 
 const getGCD = (x, y) => {
   let [n1, n2] = [x, y];
-  let remainder = -1;
-  while (remainder !== 0) {
-    if (n2 > n1) {
-      [n1, n2] = [n2, n1];
-    }
+  let remainder = 1;
+  while (remainder > 0) {
     remainder = n1 % n2;
-    if (remainder === 0) {
-      return n2;
-    }
-    n1 = remainder;
+    n1 = n2;
+    n2 = remainder;
   }
-  return remainder;
+  return n1;
 };
 
 const getGameTask = () => {
