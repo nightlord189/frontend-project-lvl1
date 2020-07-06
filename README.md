@@ -3,7 +3,7 @@
 ![](https://github.com/nightlord189/frontend-project-lvl1/workflows/make%20lint/badge.svg)
 
 ## Description
-Brain Games is training JS-projects, consists of five console brain games: even, calculator, gcd, progression, prime numbers
+Brain Games is training JS-project, consists of five console brain games: even, calculator, gcd, progression, prime numbers
 
 
 ## Getting Started
