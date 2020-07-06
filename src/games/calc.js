@@ -3,8 +3,8 @@ import getRandomInt from '../utils.js';
 
 const operations = ['+', '-', '*'];
 
-const calcResult = (n1, n2, oper) => {
-  switch (oper) {
+const calcResult = (n1, n2, operation) => {
+  switch (operation) {
     case '+':
       return n1 + n2;
     case '-':
