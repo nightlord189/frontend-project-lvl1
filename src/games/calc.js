@@ -1,6 +1,8 @@
 import gameLoop from '../index.js';
 import getRandomInt from '../utils.js';
 
+const rules = 'What is the result of the expression?';
+
 const operations = ['+', '-', '*'];
 
 const calcResult = (n1, n2, operation) => {
@@ -26,7 +28,7 @@ const getGameTask = () => {
 };
 
 const game = () => gameLoop(
-  'What is the result of the expression?',
+  rules,
   getGameTask,
 );
 

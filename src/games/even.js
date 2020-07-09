@@ -1,6 +1,8 @@
 import gameLoop from '../index.js';
 import getRandomInt from '../utils.js';
 
+const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
+
 const getGameTask = () => {
   const number = getRandomInt(1, 100);
   const correctAnswer = number % 2 === 0 ? 'yes' : 'no';
@@ -8,7 +10,7 @@ const getGameTask = () => {
 };
 
 const game = () => gameLoop(
-  'Answer "yes" if the number is even, otherwise answer "no".',
+  rules,
   getGameTask,
 );
 
