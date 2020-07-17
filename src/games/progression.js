@@ -18,7 +18,9 @@ const getGameTask = () => {
   const diff = getRandomInt(1, 10);
   const progression = createProgression(start, diff);
   const missingIndex = getRandomInt(0, progression.length - 1);
-  const progressionStr = progression.join(' ').replace(progression[missingIndex], '..');
+  const missing = progression[missingIndex];
+  progression[missingIndex] = '..';
+  const progressionStr = progression.join(' ');
   return [progressionStr, progression[missingIndex].toString()];
 };
 
