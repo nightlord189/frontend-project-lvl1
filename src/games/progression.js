@@ -1,7 +1,7 @@
 import gameLoop from '../index.js';
 import getRandomInt from '../utils.js';
 
-const rules = 'What number is missing in the progression?';
+const description = 'What number is missing in the progression?';
 
 const progressionLength = 10;
 
@@ -23,7 +23,7 @@ const getGameTask = () => {
 };
 
 const game = () => gameLoop(
-  rules,
+  description,
   getGameTask,
 );
 

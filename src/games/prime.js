@@ -1,7 +1,7 @@
 import gameLoop from '../index.js';
 import getRandomInt from '../utils.js';
 
-const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (n) => {
   if (n === 1) {
@@ -25,7 +25,7 @@ const getGameTask = () => {
 };
 
 const game = () => gameLoop(
-  rules,
+  description,
   getGameTask,
 );
 

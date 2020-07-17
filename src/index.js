@@ -15,10 +15,10 @@ const askQuestion = (name, question, correctAnswer) => {
   return false;
 };
 
-const gameLoop = (rules, getQuestion) => {
+const gameLoop = (description, getQuestion) => {
   console.log('Welcome to the Brain Games!');
   const name = askName();
-  console.log(rules);
+  console.log(description);
   let successCount = 0;
   while (successCount < gamesCount) {
     const [question, answer] = getQuestion();
