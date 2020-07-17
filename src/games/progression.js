@@ -24,9 +24,9 @@ const getGameTask = () => {
   return [progressionStr, missing.toString()];
 };
 
-const game = () => gameLoop(
+const playGame = () => gameLoop(
   description,
   getGameTask,
 );
 
-export default game;
+export default playGame;

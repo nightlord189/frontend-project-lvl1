@@ -21,9 +21,9 @@ const getGameTask = () => {
   return [number, correctAnswer];
 };
 
-const game = () => gameLoop(
+const playGame = () => gameLoop(
   description,
   getGameTask,
 );
 
-export default game;
+export default playGame;
