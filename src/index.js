@@ -3,7 +3,7 @@ import askName from './cli.js';
 
 const gamesCount = 3;
 
-const askQuestion = (name, question, correctAnswer) => {
+const playGameIteration = (name, question, correctAnswer) => {
   console.log(`Question: ${question}`);
   const answer = readlineSync.question('Your answer: ');
   if (answer === correctAnswer) {
@@ -21,7 +21,7 @@ const gameLoop = (description, getQuestion) => {
   console.log(description);
   for (let i = 0; i < gamesCount; i += 1) {
     const [question, answer] = getQuestion();
-    if (!askQuestion(name, question, answer)) {
+    if (!playGameIteration(name, question, answer)) {
       return;
     }
   }
