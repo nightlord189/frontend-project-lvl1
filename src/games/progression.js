@@ -21,7 +21,7 @@ const getGameTask = () => {
   const missing = progression[missingIndex];
   progression[missingIndex] = '..';
   const progressionStr = progression.join(' ');
-  return [progressionStr, progression[missingIndex].toString()];
+  return [progressionStr, missing.toString()];
 };
 
 const game = () => gameLoop(

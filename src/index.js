@@ -19,7 +19,7 @@ const gameLoop = (description, getQuestion) => {
   console.log('Welcome to the Brain Games!');
   const name = askName();
   console.log(description);
-  for (let i = 0; i<3; i++) {
+  for (let i = 0; i < gamesCount; i += 1) {
     const [question, answer] = getQuestion();
     if (!askQuestion(name, question, answer)) {
       return;

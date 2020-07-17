@@ -21,7 +21,7 @@ const calcResult = (n1, n2, operation) => {
 const getGameTask = () => {
   const n1 = getRandomInt(1, 100);
   const n2 = getRandomInt(1, 100);
-  const oper = operations[getRandomInt(0, operations.length-1)];
+  const oper = operations[getRandomInt(0, operations.length - 1)];
   const correctAnswer = calcResult(n1, n2, oper);
   const question = `${n1} ${oper} ${n2}`;
   return [question, correctAnswer.toString()];
